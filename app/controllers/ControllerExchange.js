@@ -1,5 +1,5 @@
-import {ViewExchange} from '/app/views/ViewExchange.js';
-import {ModelExchange} from '/app/models/ModelExchange.js';
+import {ViewExchange} from '../views/ViewExchange.js';
+import {ModelExchange} from '../models/ModelExchange.js';
 
 export class ControllerExchange {
   constructor() {

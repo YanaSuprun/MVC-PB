@@ -1,4 +1,4 @@
-import {ControllerExchange} from '/app/controllers/ControllerExchange.js';
+import {ControllerExchange} from './controllers/ControllerExchange.js';
 // import {ViewGame} from '/app/views/ViewGame.js';
 // import {ModelGame} from '/app/models/ModelGame.js';
 
