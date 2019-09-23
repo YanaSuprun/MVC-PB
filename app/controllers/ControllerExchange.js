@@ -12,7 +12,7 @@ export class ControllerExchange {
     this.model.getRate();
   }
 
-  getRate(data) {
-    this.view.render(data);
+  getRate(data, date) {
+    this.view.render(data, date);
   }
 }

@@ -4,7 +4,7 @@ export class ViewExchange {
     this.dom = document.getElementById('exchange');
   }
 
-  render(data) {
+  render(data, date) {
     this.dom.innerHTML = `
     <div class="card mt-4 bg-success">
       <div class="card-header">
