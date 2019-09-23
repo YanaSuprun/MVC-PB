@@ -2,6 +2,7 @@ export class ViewExchange {
   constructor(contr) {
     this.controller = contr;
     this.dom = document.getElementById('exchange');
+    this.controller.model.getArchiveDate("23.09.2019");
   }
 
   render(data, date) {
