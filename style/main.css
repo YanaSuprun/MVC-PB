@@ -1,10 +1,9 @@
-body{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+body {
+  background: url(../img/background.png) no-repeat;
+  background-size: cover;
 }
-.game{
-    display: flex;
+
+label {
+  font-size: 18px;
+  font-weight: bold;
 }
