@@ -6,13 +6,22 @@ export class ControllerExchange {
     this.model = new ModelExchange(this);
     this.view = new ViewExchange(this);
     this.actionGetRate();
-  }
+  };
 
   actionGetRate() {
     this.model.getRate();
-  }
+  };
 
   getRate(data, date) {
     this.view.render(data, date);
-  }
-}
+  };
+
+  getArchiveRate(data, date) {
+    this.view.render(data, date);
+  };
+
+  actionGetArchiveRate(event) {
+    let date = event.target.value.split('-').reverse().join('.');
+    this.model.getArchiveRate(date);
+  };
+};

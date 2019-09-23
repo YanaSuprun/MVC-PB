@@ -2,8 +2,9 @@ export class ViewExchange {
   constructor(contr) {
     this.controller = contr;
     this.dom = document.getElementById('exchange');
-    this.controller.model.getArchiveDate("23.09.2019");
-  }
+    this.input = document.getElementById('calendar');
+    this.input.addEventListener('change', this.controller.actionGetArchiveRate.bind(this.controller));
+  };
 
   render(data, date) {
     this.dom.innerHTML = `
@@ -17,14 +18,14 @@ export class ViewExchange {
           ${data.map(elem => {
             return `
               <p class="course-block">
-                <span class="currency-type">${elem.ccy}</span>
-                <span class="currency-type">${elem.buy} /</span>
-                <span class="currency-type">${elem.sale}</span>
+                <span class="currency-type">${elem.ccy?elem.ccy:elem.currency}</span>
+                <span class="currency-type">${elem.buy?elem.buy:elem.purchaseRate} /</span>
+                <span class="currency-type">${elem.sale?elem.sale:elem.saleRate}</span>
               </p>`
           }).join(' ')}
         </p>
       </div>
     </div>
     `
-  }
-}
+  };
+};
