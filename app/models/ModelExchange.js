@@ -1,5 +1,3 @@
-import { Currency } from '/app/models/Currency.js';
-
 export class ModelExchange {
   constructor(contr) {
     this.controller = contr;
