@@ -15,7 +15,7 @@ export class ModelExchange {
 
   getArchiveRate(date) {
     fetch(this.noCors + this.apiArchive + date).then(data => data.json()).then((obj) => {
-      let result = obj.exchangeRate.filter(curr => this.currencies.indexOf(curr.currency) !== -1)
+      let result = obj.exchangeRate.filter(curr => this.currencies.indexOf(curr.currency) !== -1).sort()
       this.controller.getArchiveRate(result, obj.date);
     });
   };
